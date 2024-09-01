@@ -9,7 +9,7 @@ import { ArrowTopRightOnSquareIcon } from '@heroicons/react/24/solid'
 import { FaGithub } from "react-icons/fa";
 
 
-function Project() {
+const Project = () => {
   return (
     <>
       <div className="group mt-10">

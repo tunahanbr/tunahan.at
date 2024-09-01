@@ -6,7 +6,7 @@ import { HomeIcon, CalendarIcon } from '@heroicons/react/24/solid'
 import { FaTwitter,FaInstagram } from 'react-icons/fa'
 
 
-function Navbar() {
+const Navbar = () => {
   return (
     <>
     <div className="fixed bottom-0 left-1/2 transform -translate-x-1/2 flex space-x-4 p-4 z-50">

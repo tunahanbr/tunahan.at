@@ -10,7 +10,7 @@ import ProfileDescription from "./components/profile-description";
 const App: FC = () => {
   return (
     <>
-      <Navbar />
+    {/*<Navbar /> */}
       <AnimatedCursor
         innerSize={8}
         outerSize={8}

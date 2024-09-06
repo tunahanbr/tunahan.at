@@ -5,9 +5,8 @@ import {
 } from "@/components/ui/card";
 import { Button } from "./ui/button";
 
-import { ArrowTopRightOnSquareIcon } from '@heroicons/react/24/solid'
+import { ArrowTopRightOnSquareIcon } from '@heroicons/react/24/solid';
 import { FaGithub } from "react-icons/fa";
-
 
 const Project = () => {
   return (
@@ -29,21 +28,35 @@ const Project = () => {
         </Card>
       </div>
       <div className="flex flex-row mt-5">
-          <div className="text-sm md:text-base w-3/4 md:w-2/3">
-            SaaS application for creating simple landing pages in minutes
-            targeted to small businesses.
-          </div>
-          <div className="flex flex-col ml-auto text-right">
-            <p>2024</p>
-            <h2 className="text-xl font-bold">Visity</h2>
-            <div className="flex gap-1 justify-end">
-            <ArrowTopRightOnSquareIcon className="size-4"/>
-            <FaGithub className="size-4" />
-            </div>
+        <div className="text-sm md:text-base w-3/4 md:w-2/3">
+          SaaS application for creating simple landing pages in minutes
+          targeted to small businesses.
+        </div>
+        <div className="flex flex-col ml-auto text-right">
+          <p>2024</p>
+          <h2 className="text-xl font-bold">Visity</h2>
+          <div className="flex gap-2 justify-end">
+            <a
+              href="https://your-live-demo-link.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-blue-500 transition-transform transform hover:scale-110"
+            >
+              <ArrowTopRightOnSquareIcon className="w-5 h-5" />
+            </a>
+            <a
+              href="https://github.com/your-repo-link"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-gray-700 transition-transform transform hover:scale-110"
+            >
+              <FaGithub className="w-5 h-5" />
+            </a>
           </div>
         </div>
+      </div>
     </>
   );
-}
+};
 
 export default Project;

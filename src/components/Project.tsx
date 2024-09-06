@@ -11,7 +11,7 @@ import { FaGithub } from "react-icons/fa";
 const Project = () => {
   return (
     <>
-      <div className="group mt-10">
+      <div className="group mt-5">
         <Card className="overflow-hidden relative shadow-lg">
           <CardHeader className="relative overflow-hidden">
             <Button className="w-24 -mt-14 mx-auto transform transition-transform duration-200 group-hover:translate-y-6">
@@ -40,7 +40,7 @@ const Project = () => {
               href="https://your-live-demo-link.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-blue-500 transition-transform transform hover:scale-110"
+              className="hover:text-gray-700 transition-transform transform hover:scale-110"
             >
               <ArrowTopRightOnSquareIcon className="w-5 h-5" />
             </a>

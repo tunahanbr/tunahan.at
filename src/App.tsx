@@ -32,7 +32,7 @@ const App: FC = () => {
           ".link",
         ]}
       />
-      <div className="container mx-auto ">
+      <div className="container mx-auto mb-12">
         <div className="w-full md:w-3/4 lg:w-1/2 mx-auto relative mt-5">
           <Hero
             name="Tunahan Karakaya"

@@ -2,7 +2,6 @@ import { motion } from 'framer-motion';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedin, faInstagram, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
-import PixelCat from './PixelCat';
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -21,14 +20,16 @@ const itemVariants = {
 
 function App() {
   return <>
-      <PixelCat />
     <motion.div
       className="text-white max-w-2xl mx-auto p-4 md:m-52"
       initial="hidden"
       animate="visible"
       variants={containerVariants}
     >
+      <div className="flex flex-col items-left md:items-start">
+      <img className="relative size-7 md:size-10 mb-[-16px] md:mb-[-18px] ml-28" src="./src/assets/cat.gif" />
       <h1 className="text-lg md:text-xl font-bold sm:text-center md:text-left">tunahan karakaya*</h1>
+      </div>
       <div className="font-light text-sm md:text-lg sm:text-center md:text-left">
         <motion.p className="mt-6" variants={itemVariants}>Software Developer aus Wels, AT</motion.p>
         <motion.p className="mt-3 max-w-lg" variants={itemVariants}>

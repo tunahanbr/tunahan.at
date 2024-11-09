@@ -27,7 +27,7 @@ function App() {
       variants={containerVariants}
     >
       <div className="flex flex-col items-left md:items-start">
-      <img className="relative size-7 md:size-10 mb-[-16px] md:mb-[-18px] ml-28" src="./src/assets/cat.gif" />
+      <img className="relative size-7 md:size-10 mb-[-16px] md:mb-[-18px] ml-28" src="/cat.gif" />
       <h1 className="text-lg md:text-xl font-bold sm:text-center md:text-left">tunahan karakaya*</h1>
       </div>
       <div className="font-light text-sm md:text-lg sm:text-center md:text-left">

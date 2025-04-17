@@ -1,3 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+::selection {
+    background-color: white;
+    color:black;
+}
+
+/* Footer.css */
+.footer {
+    width: 100%; /* Adjust width to be responsive */
+    max-width: 656px; /* Maximum width to match your design */
+    margin: 0 auto;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .footer-text {
+    margin: 0;
+    font-size: 14px;
+    color: #b9b9b9; /* Adjust color as needed */
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .footer {
+      padding: 15px; /* Slightly increase padding for smaller screens */
+    }
+  
+    .footer-text {
+      font-size: 12px; /* Adjust font size for medium screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .footer {
+      padding: 10px; /* Adjust padding for small screens */
+    }
+  
+    .footer-text {
+      font-size: 10px; /* Adjust font size for small screens */
+    }
+  }

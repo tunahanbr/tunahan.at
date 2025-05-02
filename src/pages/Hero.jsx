@@ -2,8 +2,6 @@ import { motion } from 'framer-motion';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedin, faInstagram, faXTwitter } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
-import i18n from '../i18n/i18n';
-import { useTranslation } from 'react-i18next';
 
 
 const containerVariants = {
@@ -22,7 +20,7 @@ const containerVariants = {
   };
 
 function Hero() {
-    // i18n und useTranslation entfernt
+  
   return (
     <>
     <motion.div
@@ -39,13 +37,13 @@ function Hero() {
           Software Developer aus Wels, AT
         </motion.p>
         <motion.p className="mt-3 max-w-lg" variants={itemVariants}>
-          Ich studiere Informatik an der JKU Linz und fokussiere mich auf Web- und Mobile-App-Entwicklung sowie Automatisierungslösungen.
+          Ich studiere Wirtschaftsinformatik an der JKU Linz und fokussiere mich auf die Entwicklung von branchenspezifischen Software- und Automatisierungslösungen und Digitalisierung.
         </motion.p>
         <motion.p className="mt-3 max-w-lg" variants={itemVariants}>
-          Zuvor war ich als Softwaretester im Cloud-Team bei Fronius International tätig.
+          Zuvor habe ich Informatik an der JKU studiert und war ich als Softwaretester im Cloud-Team bei Fronius International tätig.
         </motion.p>
         <motion.p className="mt-3 max-w-lg" variants={itemVariants}>
-          Schauen Sie sich einige aktuelle Projekte an und nehmen Sie gerne Kontakt auf.
+        Wirf einen Blick auf meine Projekte – bei Fragen oder Ideen, einfach melden!
         </motion.p>
       </div>
       <motion.div

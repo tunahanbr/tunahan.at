@@ -3,8 +3,7 @@ import React from 'react';
 import { techStack } from '../components/TechStackIcons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faWordpress} from '@fortawesome/free-brands-svg-icons'
-import { faCode } from '@fortawesome/free-solid-svg-icons';
-import { useTranslation } from 'react-i18next';
+import { faCode,faRobot,faChartSimple } from '@fortawesome/free-solid-svg-icons';
 
 
 const containerVariants = {
@@ -51,12 +50,22 @@ function About() {
   const services = [
     {
       title: 'Individuelle Webanwendungen',
-      description: 'Moderne, skalierbare und responsive Webanwendungen oder Websites, die mit den neuesten Technologien entwickelt wurden.',
+      description: 'Moderne, skalierbare und responsive Web-Apps, maßgeschneidert auf branchenspezifische Anforderungen – entwickelt mit Fokus auf Nutzerfreundlichkeit und Effizienz.',
       icon: <FontAwesomeIcon icon={faCode} />
     },
     {
+      title: 'Workflow-Automatisierung',
+      description: 'Ich entwickle smarte Automatisierungslösungen, die manuelle Prozesse digitalisieren und so Zeit und Ressourcen sparen.',
+      icon: <FontAwesomeIcon icon={faRobot} />
+    },
+    {
+      title: 'Digitalisierung & Beratung',
+      description: 'Ich unterstütze Unternehmen bei der digitalen Transformation – mit einem tiefen Verständnis für wirtschaftliche Prozesse und technologische Möglichkeiten.',
+      icon: <FontAwesomeIcon icon={faChartSimple} />
+    },
+    {
       title: 'WordPress Entwicklung',
-      description: 'Ich entwerfe und entwickle WordPress-Websites und pflege sie bei Bedarf',
+      description: 'Kreative und wartbare WordPress-Websites – ideal für Content-getriebene Projekte oder kleinere Unternehmen.',
       icon: <FontAwesomeIcon icon={faWordpress} />
     }
   ];
@@ -69,17 +78,15 @@ function About() {
       variants={containerVariants}
     >
       <div className="flex flex-col md:mt-[-100px] items-left md:items-start">
-        <h1 className="text-lg md:text-xl font-bold sm:text-center md:text-left">Wer bin ich?</h1>
+        <h1 className="text-lg md:text-xl font-bold sm:text-center md:text-left">wer bin ich?*</h1>
       </div>
       
       <div className="font-light text-sm md:text-lg sm:text-center md:text-left">
         <motion.p className="mt-6" variants={itemVariants}>
-          Derzeit studiere ich Informatik an der JKU in Linz und habe eine Leidenschaft für das Designen und Erstellen von Web-Apps. Es bereitet mir Freude, Ideen auf dem Bildschirm zum Leben zu erwecken, und ich erkunde gerne die neuesten Tech-Trends. Automatisierung von Workflows zur Steigerung der Effizienz ist ein weiteres Gebiet, das mich begeistert.
-        </motion.p>
+        Derzeit studiere ich Wirtschaftsinformatik an der JKU Linz und habe eine Leidenschaft für das Design und die Entwicklung von Web-Apps. Es bereitet mir große Freude, kreative Ideen auf dem Bildschirm zum Leben zu erwecken und neue Technologien zu erkunden. Besonders interessiert mich die Entwicklung branchenspezifischer Software- und Automatisierungslösungen, die manuelle Arbeit erleichtern und Prozesse effizienter gestalten. Mein Ziel ist es, Unternehmen bei der Digitalisierung zu unterstützen und als Brücke zwischen Wirtschaft und Technik maßgeschneiderte Lösungen zu schaffen.        </motion.p>
         <motion.p className="mt-3" variants={itemVariants}>
-          Ich bin auch fasziniert von Psychologie, besonders wenn es um Allgemeinwissen und Selbstverbesserung geht. Dieses Interesse fördert meine Neugier und hilft mir, sowohl persönlich als auch beruflich zu wachsen. Erkunden Sie gerne meine Projekte und kontaktieren Sie mich, wenn Sie sich vernetzen möchten!
+        Neben Technik interessiere ich mich auch sehr für Psychologie – besonders in den Bereichen Selbstreflexion, persönliche Weiterentwicklung und wie wir als Menschen ticken. Auch der Islam spielt eine wichtige Rolle in meinem Leben und inspiriert mich, bewusst, verantwortungsvoll und mit Sinn durchs Leben zu gehen. Diese Interessen helfen mir, über den Tellerrand hinauszublicken und mich nicht nur fachlich, sondern auch persönlich weiterzuentwickeln. Wenn du neugierig bist oder dich austauschen möchtest – schau dir gern meine Projekte an und melde dich einfach!        
         </motion.p>
-
         {/* Tech Stack */}
         <motion.div variants={itemVariants} className="mt-12">
           <h3 className="text-base font-semibold mb-6 text-left">Aktueller Tech-Stack:</h3>

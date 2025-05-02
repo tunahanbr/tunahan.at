@@ -1,18 +1,13 @@
 import { useTranslation } from 'react-i18next';
 import { NavLink } from 'react-router-dom';
-import i18n from '../i18n/i18n';
 
 const Navbar = () => {
-  // Remove useTranslation and i18n usage
-  // const { t, i18n } = useTranslation();
   
   const navItems = [
     { path: '/', label: 'home'},
     { path: '/about', label: 'über mich'},
     { path: '/projects', label: 'projekte'}  
   ];
-
-  // Remove toggleLanguage and i18n.language logic
 
   return (
     <nav className="w-full mt-10 p-4 text-white relative">

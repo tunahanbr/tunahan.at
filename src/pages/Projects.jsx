@@ -1,8 +1,6 @@
 import React from 'react'
 import ExpandableCard from '../components/ExpandableCard';
 import { motion } from 'framer-motion';
-import i18n from '../i18n/i18n';
-import { useTranslation } from 'react-i18next';
   
   const containerVariants = {
     hidden: { opacity: 0 },

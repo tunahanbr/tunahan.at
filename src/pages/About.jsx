@@ -48,16 +48,15 @@ const ServiceCard = ({ title, description, icon }) => {
 };
 
 function About() {
-  const { t } = useTranslation();
   const services = [
     {
-      title: t('about.service1Title'),
-      description: t('about.service1Description'),
+      title: 'Individuelle Webanwendungen',
+      description: 'Moderne, skalierbare und responsive Webanwendungen oder Websites, die mit den neuesten Technologien entwickelt wurden.',
       icon: <FontAwesomeIcon icon={faCode} />
     },
     {
-      title: t('about.service2Title'),
-      description: t('about.service2Description'),
+      title: 'WordPress Entwicklung',
+      description: 'Ich entwerfe und entwickle WordPress-Websites und pflege sie bei Bedarf',
       icon: <FontAwesomeIcon icon={faWordpress} />
     }
   ];
@@ -70,20 +69,20 @@ function About() {
       variants={containerVariants}
     >
       <div className="flex flex-col md:mt-[-100px] items-left md:items-start">
-        <h1 className="text-lg md:text-xl font-bold sm:text-center md:text-left">{t('about.title')}</h1>
+        <h1 className="text-lg md:text-xl font-bold sm:text-center md:text-left">Wer bin ich?</h1>
       </div>
       
       <div className="font-light text-sm md:text-lg sm:text-center md:text-left">
         <motion.p className="mt-6" variants={itemVariants}>
-          {t('about.intro1')}
+          Derzeit studiere ich Informatik an der JKU in Linz und habe eine Leidenschaft für das Designen und Erstellen von Web-Apps. Es bereitet mir Freude, Ideen auf dem Bildschirm zum Leben zu erwecken, und ich erkunde gerne die neuesten Tech-Trends. Automatisierung von Workflows zur Steigerung der Effizienz ist ein weiteres Gebiet, das mich begeistert.
         </motion.p>
         <motion.p className="mt-3" variants={itemVariants}>
-          {t('about.intro2')}
+          Ich bin auch fasziniert von Psychologie, besonders wenn es um Allgemeinwissen und Selbstverbesserung geht. Dieses Interesse fördert meine Neugier und hilft mir, sowohl persönlich als auch beruflich zu wachsen. Erkunden Sie gerne meine Projekte und kontaktieren Sie mich, wenn Sie sich vernetzen möchten!
         </motion.p>
 
         {/* Tech Stack */}
         <motion.div variants={itemVariants} className="mt-12">
-          <h3 className="text-base font-semibold mb-6 text-left">{t('about.techStackTitle')}</h3>
+          <h3 className="text-base font-semibold mb-6 text-left">Aktueller Tech-Stack:</h3>
           <div className="grid grid-cols-4 gap-6 justify-items-center">
             {techStack.map((tech, index) => (
               <TechIcon key={index} icon={tech} />
@@ -93,7 +92,7 @@ function About() {
 
         {/* Services Section */}
         <motion.div variants={itemVariants} className="mt-16">
-          <h3 className="text-base font-semibold mb-6 text-left">{t('about.servicesTitle')}</h3>
+          <h3 className="text-base font-semibold mb-6 text-left">Meine Dienstleistungen</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {services.map((service, index) => (
               <ServiceCard key={index} {...service} />

@@ -1,0 +1,74 @@
+version: '3.8'
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3002:3002"
+    environment:
+      - NODE_ENV=production
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3002"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  strapi-db:
+    image: postgres:15
+    container_name: strapi-db
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: strapi
+      POSTGRES_PASSWORD: strapi
+      POSTGRES_DB: strapi
+    volumes:
+      - strapi_db_data:/var/lib/postgresql/data
+
+  strapi:
+    image: strapi/strapi
+    container_name: strapi
+    restart: unless-stopped
+    environment:
+      DATABASE_CLIENT: postgres
+      DATABASE_HOST: strapi-db
+      DATABASE_PORT: 5432
+      DATABASE_NAME: strapi
+      DATABASE_USERNAME: strapi
+      DATABASE_PASSWORD: strapi
+      NODE_ENV: development
+    volumes:
+      - ./strapi:/srv/app
+    ports:
+      - "1338:1337"
+    depends_on:
+      - strapi-db
+
+  umami-db:
+    image: postgres:15
+    container_name: umami-db
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: umami
+      POSTGRES_PASSWORD: umami
+      POSTGRES_DB: umami
+    volumes:
+      - umami_db_data:/var/lib/postgresql/data
+
+  umami:
+    image: ghcr.io/umami-software/umami:postgresql-latest
+    container_name: umami
+    restart: unless-stopped
+    environment:
+      DATABASE_URL: postgresql://umami:umami@umami-db:5432/umami
+      APP_SECRET: "your-secret-key"
+    depends_on:
+      - umami-db
+    ports:
+      - "3003:3000"
+
+volumes:
+  umami_db_data:
+  strapi_db_data:

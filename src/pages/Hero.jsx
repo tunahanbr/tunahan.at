@@ -22,7 +22,7 @@ const containerVariants = {
   };
 
 function Hero() {
-    const { t } = useTranslation();
+    // i18n und useTranslation entfernt
   return (
     <>
     <motion.div
@@ -35,15 +35,17 @@ function Hero() {
       <h1 className="text-lg md:text-xl font-bold sm:text-center md:text-left">tunahan karakaya*</h1>
       </div>
       <div className="font-light text-sm md:text-lg sm:text-center md:text-left">
-        <motion.p className="mt-6" variants={itemVariants}>{t('home.description')}</motion.p>
-        <motion.p className="mt-3 max-w-lg" variants={itemVariants}>
-        {t('home.carrer')}
-                </motion.p>
-        <motion.p className="mt-3 max-w-lg" variants={itemVariants}>
-        {t('home.past')}
+        <motion.p className="mt-6" variants={itemVariants}>
+          Software Developer aus Wels, AT
         </motion.p>
         <motion.p className="mt-3 max-w-lg" variants={itemVariants}>
-        {t('home.cta')}
+          Ich studiere Informatik an der JKU Linz und fokussiere mich auf Web- und Mobile-App-Entwicklung sowie Automatisierungslösungen.
+        </motion.p>
+        <motion.p className="mt-3 max-w-lg" variants={itemVariants}>
+          Zuvor war ich als Softwaretester im Cloud-Team bei Fronius International tätig.
+        </motion.p>
+        <motion.p className="mt-3 max-w-lg" variants={itemVariants}>
+          Schauen Sie sich einige aktuelle Projekte an und nehmen Sie gerne Kontakt auf.
         </motion.p>
       </div>
       <motion.div
@@ -52,16 +54,36 @@ function Hero() {
         animate="visible"
         variants={containerVariants}
       >
-        <motion.a href="https://github.com/tunahanbr" aria-label="GitHub" variants={itemVariants}>
+        <motion.a 
+          href="https://github.com/tunahanbr" 
+          aria-label="GitHub" 
+          variants={itemVariants}
+          whileHover={{ scale: 1.15, boxShadow: "0px 4px 16px rgba(0,0,0,0.15)" }}
+        >
           <FontAwesomeIcon icon={faGithub} size="xl" />
         </motion.a>
-        <motion.a href="https://x.com/tunahanbrr" aria-label="Twitter" variants={itemVariants}>
+        <motion.a 
+          href="https://x.com/tunahanbrr" 
+          aria-label="Twitter" 
+          variants={itemVariants}
+          whileHover={{ scale: 1.15, boxShadow: "0px 4px 16px rgba(0,0,0,0.15)" }}
+        >
           <FontAwesomeIcon icon={faXTwitter} size="xl" />
         </motion.a>
-        <motion.a href="https://www.linkedin.com/in/tunahan-karakaya-067b67309/" aria-label="LinkedIn" variants={itemVariants}>
+        <motion.a 
+          href="https://www.linkedin.com/in/tunahan-karakaya-067b67309/" 
+          aria-label="LinkedIn" 
+          variants={itemVariants}
+          whileHover={{ scale: 1.15, boxShadow: "0px 4px 16px rgba(0,0,0,0.15)" }}
+        >
           <FontAwesomeIcon icon={faLinkedin} size="xl" />
         </motion.a>
-        <motion.a href="mailto:me@tunahan.at" aria-label="Email" variants={itemVariants}>
+        <motion.a 
+          href="mailto:me@tunahan.at" 
+          aria-label="Email" 
+          variants={itemVariants}
+          whileHover={{ scale: 1.15, boxShadow: "0px 4px 16px rgba(0,0,0,0.15)" }}
+        >
           <FontAwesomeIcon icon={faEnvelope} size="xl" />
         </motion.a>
       </motion.div>

@@ -15,61 +15,59 @@ import { useTranslation } from 'react-i18next';
   };
 
 function Projects() {
-  const { t, i18n } = useTranslation();
-
   const projectCards = [
     {
-      title: t('projects.portfolio.title'),
-      description: t('projects.portfolio.description'),
+      title: 'Portfolio-Website',
+      description: 'Persönliches Portfolio erstellt mit React und Tailwind CSS',
       src: "portfolio.png",
       ctaText: "Demo",
       ctaLink: "https://tunahan.at",
       sourceLink: "https://github.com/devtunahan/tunahan.at",
-      content: t('projects.portfolio.content')
+      content: ''
     },
     {
-      title: t('projects.timeloom.title'),
-      description: t('projects.timeloom.description'),
+      title: 'timeloom',
+      description: 'Zeiterfassungsanwendung für Freelancer',
       src: "timeloom-white.svg",
       ctaText: "Demo",
       ctaLink: "https://timeloom.co",
       sourceLink: "https://github.com/devtunahan/timeloom",
-      content: t('projects.timeloom.content')
+      content: 'Hosting dieser Anwendung ist lokal auf meinem Raspberry Pi, verwendet Cloudflare Tunnel für die Erreichbarkeit im Web. Für das Frontend wurden React und Tailwind CSS verwendet, Supabase als Backend-Dienst.'
     },
     {
-      title: t('projects.feedback.title'),
-      description: t('projects.feedback.description'),
+      title: 'feedback',
+      description: 'Komponente zum Einbetten auf Ihrer Website zum Geben von Feedback, Backend mit PocketBase',
       src: "feedback.jpeg",
       ctaText: "Demo",
       ctaLink: "https://github.com/tunahanbr/feedback.git",
       sourceLink: "https://github.com/devtunahan/feedback",
-      content: t('projects.feedback.content')
+      content: ''
     },
     {
-      title: t('projects.googleMapsScraper.title'),
-      description: t('projects.googleMapsScraper.description'),
+      title: 'Google Maps Scraper',
+      description: 'Google Maps Scraper, um Geschäftsinformationen zu extrahieren, für den Eigenbedarf!',
       src: "google-maps-scraper.png",
       ctaText: "Demo",
       ctaLink: "https://github.com/tunahanbr/google-maps-scraper",
       sourceLink: "https://github.com/tunahanbr/google-maps-scraper",
-      content: t('projects.googleMapsScraper.content')
+      content: 'Noch in Entwicklung'
     },
     {
-      title: t('projects.ipInsight.title'),
-      description: t('projects.ipInsight.description'),
+      title: 'IP Insight',
+      description: 'Mit dieser API können Sie IP-Daten anzeigen',
       src: "ip-insight.jpg",
       ctaText: "Demo",
       ctaLink: "https://ip-insight-api-e3aa1f4a8919.herokuapp.com/",
       sourceLink: "https://github.com/tunahanbr/ip-insight-api",
-      content: t('projects.ipInsight.content')
+      content: 'Einfach zu verwenden und selbst zu hosten. Eine API für die Bereitstellung von IP Daten für den Eigengebrauch. Erstellt mit expressJS.'
     }
   ];
 
   return (
    <>
    <div className="max-w-2xl  p-4 md:m-52">
-      <h1 className="text-lg mb-2 md:mt-[-100px] text-white md:text-xl font-bold sm:text-center md:text-left">projects*</h1>
-      <p className='text-white mb-6'>{t('projects.description')}</p>
+      <h1 className="text-lg mb-2 md:mt-[-100px] text-white md:text-xl font-bold sm:text-center md:text-left">projekte*</h1>
+      <p className='text-white mb-6'>Hier sind einige der Projekte, an denen ich gearbeitet habe</p>
       <ExpandableCard 
         cards={projectCards} 
         ctaButtonColor="bg-[#9fba9f]"
